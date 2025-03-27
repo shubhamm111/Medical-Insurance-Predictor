@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Insurance Predictor</title>
+</head>
+<head>
+  
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h2>Medical Insurance Prediction</h2>
+    <form action="/predict" method="post">
+        <label>Age:</label>
+        <input type="number" name="age" required><br>
+
+        <label>Sex:</label>
+        <select name="sex">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select><br>
+
+        <label>BMI:</label>
+        <input type="text" name="bmi" required><br>
+
+        <label>Children:</label>
+        <input type="number" name="children" required><br>
+
+        <label>Smoker:</label>
+        <select name="smoker">
+            <option value="1">Yes</option>
+            <option value="0" selected>No</option>
+        </select><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <h3>{{ prediction }}</h3>  <!-- Show prediction if available -->
+    {% endif %}
+    
+</body>
+</html>
