@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 # Function to make the prediction
 def predict_charges(region, age, sex, bmi, children, smoker):
-    # Dummy prediction logic (replace with your actual prediction model)
+    # Dummy prediction logic (replace with  actual prediction model)
     a = np.zeros(5)
     a[0] = age
     a[1] = sex
