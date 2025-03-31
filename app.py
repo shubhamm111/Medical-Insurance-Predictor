@@ -15,7 +15,7 @@ def predict_charges(region, age, sex, bmi, children, smoker):
     a[3] = children
     a[4] = smoker
 
-    # Replace this with the actual prediction logic (e.g., using your trained model)
+    # Replace this with the actual prediction logic (e.g., using trained model)
     # For now, we are just returning a dummy value based on some calculation.
     predicted_charge = a[0] * 100 + a[1] * 200 + a[2] * 50 + a[3] * 20 + a[4] * 150
     return f"Predicted Medical Insurance Charge is: ${predicted_charge:,.2f}"
